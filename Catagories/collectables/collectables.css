@@ -1,0 +1,726 @@
+/* Font Imports */
+@font-face {
+  font-family: saveurSans;
+  src: url("Elements/Saveur_sans.otf");
+}
+
+@font-face {
+  font-family: jost;
+  src: url("Elements/Jost.ttf");
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url("Elements/Jost_light.ttf");
+}
+
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: white;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  z-index: 1000;
+  transition: transform 0.4s ease, background 0.4s ease;
+  box-sizing: border-box; /* Make sure padding doesn't affect the overall size */
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: gray;
+}
+
+.navbar .brand {
+  font-family: saveurSans, serif;
+  font-size: 1.8rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar .brand:hover {
+  color: gray;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-icons i {
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-icons i:hover {
+  color: gray;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 80px; /* Reduce height for mobile view */
+  }
+
+  .navbar ul {
+    gap: 10px;
+  }
+
+  .navbar .brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-icons i {
+    font-size: 1.3rem;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8rem; /* Adjust font size on smaller screens */
+  }
+}
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+  list-style: disc;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+  list-style: disc;
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+
+.slide-menu li {
+  display: list-item; /* Ensure default list display */
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+.slide-menu ul {
+  list-style: disc; /* Bullet points */
+  padding-left: 20px; /* Indent for bullets */
+  margin: 0;
+}
+
+
+
+
+
+/* Video Section Styling */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Catalog Section */
+.catalog {
+  margin: 50px auto;
+  max-width: 1850px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Catalog Grid Layout */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 2rem; /* Add some horizontal spacing */
+}
+
+/* Catalog Item */
+.catalog-item {
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Catalog Item Hover Effects */
+.catalog-item:hover {
+  transform: translateY(-10px); /* Lift the item up */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Catalog Image */
+.catalog-image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  transition: transform 0.3s ease-in-out; /* Image zoom effect */
+}
+
+/* Image Zoom on Hover */
+.catalog-item:hover .catalog-image {
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Catalog Title */
+.catalog-title {
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Title Hover Effect */
+.catalog-item:hover .catalog-title {
+  color: #333; /* Change title color on hover */
+}
+
+/* Catalog Price */
+.catalog-price {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Price Hover Effect */
+.catalog-item:hover .catalog-price {
+  color: #333; /* Change price color on hover */
+}
+
+
+/* Shop by Category */
+.shop-by-category {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.category-title {
+  font-family: saveurSans, serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.category-description {
+  font-family: jost, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.category-name {
+  font-family: jost, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Video Overlay Text */
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.video-overlay h1 {
+  font-family: saveurSans, serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.video-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.video-link {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  color: white;
+  border-bottom: 1px solid white;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.video-link:hover {
+  color: gray;
+  border-color: gray;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-family: jost, sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+  border-top: 1px solid lightgray;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: gray;
+}
+
+
+/* Seasonal Softness Section */
+.seasonal-softness {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.softness-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.softness-left {
+  position: relative;
+}
+
+.softness-right {
+  position: relative;
+}
+
+.softness-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales proportionally and fills the container */
+  border-radius: 10px;
+}
+
+/* Text Content Styling */
+.softness-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.softness-title {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.softness-description {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.softness-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.softness-link {
+  font-family: jost, sans-serif;
+  font-size: 1rem;
+  color: black;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.softness-link:hover {
+  color: gray;
+}
+
+
+/* Pradasphere News Section */
+.pradasphere-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Black background for the section */
+  padding: 50px 20px;
+  min-height: 400px; /* Adjust height as needed */
+  color: #fff; /* White text for contrast */
+}
+
+.pradasphere-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center align text */
+  max-width: 1200px; /* Optional width constraint */
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  gap: 20px; /* Adds space between the image and text */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  width: 100%; /* Ensures the image container takes full width */
+}
+
+.pradasphere-image {
+  max-width: 80%; /* Adjusts the size of the image */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.campaign-details {
+  padding: 20px;
+}
+
+.campaign-title {
+  font-family: saveurSans, serif; /* LV font for the title */
+  font-size: 1.8rem; /* Adjust the title font size */
+  letter-spacing: 1px; /* Adds spacing between letters */
+  text-transform: uppercase; /* Converts text to uppercase */
+  color: #fff; /* White text for better readability */
+}
+
+/* Footer Section */
+.custom-footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto 20px auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.footer-quote {
+  font-family: saveurSans, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ending-bar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 100px;
+}
+
+.ending-text {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/** Almost last slide **/
+
+/* Upcycle Section Styles */
+.louis-vuitton-section {
+  text-align: center;
+  padding: 70px 40px; /* Increased padding for better spacing */
+}
+
+.louis-title {
+  font-family: saveurSans;
+  font-size: 2.5rem; /* Slightly larger title */
+  margin-bottom: 15px;
+  color: black;
+}
+
+.louis-subtitle {
+  font-family: jost_light;
+  font-size: 1.1rem; /* Slightly larger subtitle */
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px; /* Increased spacing under subtitle */
+  line-height: 1.8;
+}
+
+.louis-services {
+  display: flex;
+  gap: 30px; /* Larger gap between cards */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  max-width: 650px; /* Increased card width */
+  text-align: center;
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Larger spacing under the image */
+}
+
+.service-card h3 {
+  font-family: jost;
+  font-size: 1.4rem; /* Larger heading */
+  margin-bottom: 15px; /* Larger spacing below the heading */
+  color: black;
+}
+
+.service-link {
+  font-family: jost_light;
+  font-size: 1rem; /* Slightly larger link text */
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+  margin: 0 8px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.service-link:hover {
+  color: gray;
+  border-color: gray;
+}
+
+.service-links a {
+  display: inline-block;
+  margin: 0 8px; /* Adjusted spacing between links */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .louis-services {
+    flex-direction: column;
+    gap: 40px; /* Larger gap between stacked cards */
+  }
+
+  .service-card {
+    max-width: 90%; /* Adjust card width for smaller screens */
+    margin: 0 auto; /* Center align the card */
+  }
+}
+
+/* Footer Section Styles */
+.footer-section {
+  text-align: center;
+  padding: 50px 20px; /* Adjusts the space around the footer */
+  background-color: #fff; /* Background color of the footer */
+}
+
+.footer-title {
+  font-family: saveurSans; /* Use the Saveur Sans font as seen in the title */
+  font-size: 2rem; /* Adjust size as needed */
+  color: black; /* Text color */
+  text-transform: uppercase; /* Optional: Makes the text all caps */
+  margin: 0; /* Removes any extra margin */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  .navbar ul {
+    gap: 10px;
+  }
+
+  .navbar .brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-icons i {
+    font-size: 1.3rem;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8rem;
+  }
+
+  .louis-services {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .service-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.7rem;
+  }
+
+  .navbar .brand {
+    font-size: 1.2rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .video-section {
+    height: auto; /* Allow the video section to adapt to content */
+  }
+
+  .softness-container {
+    grid-template-columns: 1fr; /* Stacked layout */
+    gap: 20px;
+  }
+}

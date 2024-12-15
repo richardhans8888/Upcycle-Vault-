@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="singup.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 
+'apple-touch-icon-retina.png')}">
+    <title>UPCYCLE VAULT</title>
+</head>
+<body>
+
+    <nav id="navbar" class="navbar">
+        <ul>
+          <li><i class="fa-solid fa-bars" id="menu_icon"></i></li>
+          <li><a href="#" class="nav-hid">Menu</a></li>
+        </ul>
+        <a href="#" class="brand">UPCYCLE VAULT</a>
+        <ul>
+
+        </ul>
+      </nav>
+
+          <!-- Slide-in Menu -->
+<div id="slideMenu" class="slide-menu">
+  <span id="closeMenu" class="close-arrow">&#x2190; Close</span>
+  <ul>
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../myVault/singup.html">My Vault</a></li>
+    <li><a href="../Mens/men.html">Men's Collection</a></li>
+    <li><a href="../woman/woman.html">Women's Collection</a></li>
+    <li><a href="../collectables/collectables.html">Collectables</a></li>
+    <li><a href="../House/house.html">House Collection</a></li>
+    <li><a href="../Article/readmore.html">Magazine</a></li>
+    <li><a href="../Founders/founders.html">Founders</a></li>
+    <li><a href="../Goals/goals.html">Our Goals</a></li>
+    <li><a href="../ProductDev/product.html">How our Products Are Made</a></li>
+    <li><a href="../Future/future.html">Future Collection</a></li>
+
+  </ul>
+</div>
+
+    <div class="signup-container">
+        <div class="signup-form">
+            <h1>Create Your Account</h1>
+            <p>Create your account to have access to a better experience.</p>
+            <p class="existing-account">Already have Upcyle account? <a href="login.html">Log in here</a>.</p>
+            
+            <form id="signup-form" action="#" method="POST">
+                <label for="email">* Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+                <label for="email-confirmation">* Email Confirmation</label>
+                <input type="email" id="email-confirmation" name="email-confirmation" required placeholder="Confirm your email">
+    
+                <label for="password">* Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+    
+                <small>Password must be different from your email and contain:</small>
+                <ul>
+                    <li>At least 8 characters</li>
+                    <li>At least 1 number</li>
+                    <li>At least 1 capital letter</li>
+                    <li>At least 1 lowercase letter</li>
+                    <li>At least one special character: ! ? # $ & { } * + , - . : ; < = > ? @ [ ] ^ _ | ~()</li>
+                </ul>
+    
+                <label for="title">* Title</label>
+                <select id="title" name="title" required>
+                    <option value="" disabled selected>Select your title</option>
+                    <option value="mr">Mr.</option>
+                    <option value="ms">Ms.</option>
+                    <option value="mrs">Mrs.</option>
+                </select>
+    
+                <label for="first-name">* First Name</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+    
+                <label for="last-name">* Last Name</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+    
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+    
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signupForm = document.getElementById('signup-form'); // Target the sign-up form
+
+            if (signupForm) {
+                const signupMessage = document.createElement('p'); // Create a message element
+                signupMessage.id = "signup-message";
+                signupMessage.style.display = "none";
+                signupMessage.style.color = "green";
+                signupMessage.style.fontWeight = "bold";
+                signupMessage.style.marginTop = "20px";
+
+                // Append the message element to the form
+                signupForm.appendChild(signupMessage);
+
+                signupForm.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // Show the "Creating your account..." message
+                    signupMessage.textContent = "Creating your account...";
+                    signupMessage.style.display = "block";
+
+                    // Simulate a delay before redirecting
+                    setTimeout(function () {
+                        window.location.href = "../../../index.html"; // Redirect to ../../../index.html
+                    }, 2000); // Delay for 2 seconds (2000ms)
+                });
+            } else {
+                console.error("Sign-up form not found. Please check the HTML structure.");
+            }
+        });
+    </script>
+
+
+<script src="singup.js"></script>
+</body>
+</html>

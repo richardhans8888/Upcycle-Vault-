@@ -1,0 +1,416 @@
+@font-face {
+    font-family: saveurSans;
+    src: url(FounderElement/Saveur_sans.otf);
+  }
+  
+  @font-face {
+    font-family: jost;
+    src: url(FounderElement/Jost.ttf);
+  }
+  
+  @font-face {
+    font-family: jost_light;
+    src: url(FounderElement/Jost_light.ttf);
+  }
+  
+
+
+/* Navbar Styling */
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: white; 
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0; 
+}
+  
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* New Mobile Menu Style */
+.navbar ul.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Hide menu items on smaller screens */
+.navbar ul.menu.mobile-menu {
+    display: none; /* Initially hide the menu */
+}
+
+/* Show the menu when the 'active' class is added */
+.navbar ul.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;  /* Position the menu below the navbar */
+    right: 0;
+    background: white;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+/* Style the menu items */
+.navbar ul.menu.active li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar ul.menu.active li a {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Navbar Styling */
+.navbar ul li {
+    list-style: none;
+}
+  
+.navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding: 0 12px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+.navbar .brand {
+    font-family: saveurSans, serif;
+    font-size: 1.8em;
+    color: black;
+    text-decoration: none;
+}
+  
+.navbar i {
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar ul li a:hover,
+.navbar .brand:hover {
+    color: gray;
+}
+
+.navbar i:hover {
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: jost_light, Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.founder-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 60px; /* Add this to create space before the first section */
+
+}
+
+.founder-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.founder-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.founder-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.founder-text {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.founder-text h2 {
+    font-family: saveurSans, serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.founder-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.founder-text a {
+    font-family: saveurSans, serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+    border-bottom: 2px solid #0073e6;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.founder-text a:hover {
+    color: #005bb5;
+    border-color: #005bb5;
+}
+
+
+
+
+
+
+/* Footer Section */
+.custom-footer {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-separator {
+    width: 90%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0 auto 20px auto;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: saveurSans, serif;
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+  .footer-quote {
+    font-family: saveurSans, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .ending-bar {
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 100px;
+  }
+  
+  .ending-text {
+    font-family: saveurSans, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+
+  /* Remove initial grey spill & add smooth transition */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9); /* Translucent */
+    color: white;
+    transition: left 0.5s ease, opacity 0.3s ease;
+    z-index: 1000;
+    opacity: 0; /* Make it invisible initially */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Consistent Font */
+  }
+  
+  /* Ensure smooth appearance */
+  .slide-menu.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  /* Slide Menu Links Consistency */
+  .slide-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+  
+  .slide-menu a:hover {
+    color: #f0a500;
+  }
+  
+  /* Close Arrow */
+  .close-arrow {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+
+
+
+
+
+
+
+
+
+
+  /* General Responsive Styles */
+@media (max-width: 1200px) {
+  .founder-section {
+      flex-direction: column;
+      margin-top: 20px;
+  }
+  .founder-image {
+      max-width: 300px;
+  }
+  .founder-text h2 {
+      font-size: 24px;
+  }
+  .founder-text p {
+      font-size: 16px;
+  }
+  .founder-text a {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 0 20px;
+      height: 70px;
+  }
+  .navbar ul.menu {
+      gap: 10px;
+  }
+  .navbar ul li a {
+      font-size: 0.8em;
+  }
+  .navbar .brand {
+      font-size: 1.5em;
+  }
+  .founder-section {
+      padding: 20px;
+  }
+  .founder-text h2 {
+      font-size: 20px;
+  }
+  .founder-text p {
+      font-size: 14px;
+  }
+  .custom-footer .footer-content {
+      font-size: 1rem;
+  }
+  .custom-footer .footer-quote {
+      font-size: 1.2rem;
+  }
+  .ending-bar .ending-text {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
+  .navbar ul.menu {
+      flex-direction: column;
+      gap: 15px;
+  }
+  .navbar ul.menu.active {
+      position: relative;
+      box-shadow: none;
+  }
+  .founder-section {
+      text-align: center;
+  }
+  .founder-text {
+      padding: 0;
+  }
+  .founder-text h2 {
+      font-size: 18px;
+  }
+  .founder-text p {
+      font-size: 12px;
+  }
+  .custom-footer {
+      padding: 10px 0;
+  }
+  .custom-footer .footer-content {
+      font-size: 0.9rem;
+  }
+  .custom-footer .footer-quote {
+      font-size: 1rem;
+  }
+  .ending-bar .ending-text {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar ul.menu li a {
+      font-size: 0.7em;
+  }
+  .navbar .brand {
+      font-size: 1.3em;
+  }
+  .founder-text h2 {
+      font-size: 16px;
+  }
+  .founder-text p {
+      font-size: 11px;
+  }
+  .ending-bar .ending-text {
+      font-size: 1rem;
+  }
+}

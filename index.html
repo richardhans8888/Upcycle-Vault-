@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 
+'apple-touch-icon-retina.png')}">
+    <title>Upcycle Vault - Official International Website</title>
+</head>
+<body>
+
+    
+  <nav id="navbar" class="navbar">
+    <ul>
+        <li><i class="fa-solid fa-bars" id="menu_icon"></i></li>
+        <li><a href="#" class="nav-hid" id="menu_toggle">Menu</a></li>
+    </ul>
+    <a href="#" class="brand">Upcycle Vault</a>
+    <ul>
+        <li><a href="Catagories/contact/contact.html">Contact us</a></li>
+        <li><a href="Catagories/myVault/singup.html">My VAULT</a></li>
+    </ul>
+</nav>
+
+<!-- Slide-in Menu -->
+<div id="slideMenu" class="slide-menu">
+    <span id="closeMenu" class="close-arrow">&#x2190; Close</span>
+    <ul>
+        <li><a href=>My VAULT</a></li>
+        <li><a href="Catagories/Mens/men.html">Men's Collection</a></li>
+        <li><a href="Categories/woman/woman.html">Women's Collection</a></li>
+        <li><a href="Catagories/collectables/collectables.html">Collectables</a></li>
+        <li><a href="Categories/House/house.html">House Collection</a></li>
+        <li><a href="Catagories/Article/readmore.html">Magazine</a></li>
+        <li><a href="Catagories/Founders/founders.html">Founders</a></li>
+        <li><a href="Catagories/Goals/goals.html">Our Goals</a></li>
+        <li><a href="Catagories/ProductDev/product.html">How our Products Are Made</a></li>
+        <li><a href="Catagories/Future/future.html">Future Collection</a></li>
+    </ul>
+</div>
+
+
+
+
+  
+
+    <section class="videobg" id="video1">
+        <video src="assets/Service Pages/GYJ2.mp4" type="video/mp4" autoplay loop muted plays-inline class="video" ></video>
+        <h2>Build your own VAULT</h2>
+    </section>
+
+    <script>
+      function scrollToCategories() {
+          // Smooth scroll to the section with the id 'services'
+          document.querySelector('#services').scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
+  </script>
+      
+
+    <section class="services" id="services">
+        <h2>OUR CATEGORIES</h2>
+        <div class="grid">
+            <!-- Collectables Card -->
+            <div class="grid-item">
+                <div class="card">
+                    <a href="Catagories/collectables/collectables.html" class="card-link">
+                        <img class="card-image" src="assets/Service Pages/Service_image1.jpg" alt="service img 1">
+                        <div class="card-content">
+                            <h1>VAULT Collectables</h1>
+                            <p>Search through exciting collectables.</p>
+                            <button class="card-btn">Explore Collectables</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Men's Collection Card -->
+            <div class="grid-item">
+                <div class="card">
+                    <a href="Catagories/Mens/men.html" class="card-link">
+                        <img class="card-image" src="assets/img/MEN.webp" alt="service img 2">
+                        <div class="card-content">
+                            <h1>Men's Collection</h1>
+                            <p>Choose the perfect gift from our specially curated selection of products.</p>
+                            <button class="card-btn">Explore Men's Collection</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Woman's Collection Card -->
+            <div class="grid-item">
+                <div class="card">
+                    <a href="Catagories/woman/woman.html" class="card-link">
+                        <img class="card-image" src="assets/img/WOMAN.webp" alt="service img 3">
+                        <div class="card-content">
+                            <h1>Woman's Collection</h1>
+                            <p>Explore our precisely tailored collection for women.</p>
+                            <button class="card-btn">Explore Woman's Collection</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- House Collections Card -->
+            <div class="grid-item">
+                <div class="card">
+                    <a href="Catagories/House/house.html" class="card-link">
+                        <img class="card-image" src="assets/img/HOME.webp" alt="service img 3">
+                        <div class="card-content">
+                            <h1>House Collections</h1>
+                            <p>Explore our House Collection for your humble abode.</p>
+                            <button class="card-btn">Explore House Collections</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="image-section">
+        <div class="image-card">
+          <img src="assets/img/S11.png" alt="Gifts for Him" class="image">
+          <div class="image-overlay">
+            <h2>Founders of Upcycle Vault</h2>
+            <a href="Catagories/Founders/founders.html" class="btn">Meet the Founders</a>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="assets/img/S22.png" alt="Handbags" class="image">
+          <div class="image-overlay">
+            <h2>Our Goals</h2>
+            <a href="Catagories/Goals/goals.html" class="btn">Learn about our goals</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-section">
+        <h2 class="featured-title">Christmas Featurette</h2>
+        <div class="featured-content">
+          <div class="featured-image-container">
+            <img src="assets/img/S3.jpg" alt="Gucci Gift" class="featured-image">
+          </div>
+          <div class="featured-text-container">
+            <h1>Upcycle Gift: Holiday Special</h1>
+            <p>
+              Introducing the first chapter of our four-part holiday journey, where cherished moments 
+              are woven into lasting memories during a serene pause on the path to celebration. 
+              Experience the beauty of togetherness and the joy of sustainable luxury this season.            </p>
+            <a href="Catagories/Article/readmore.html" class="featured-read-more">Explore more News & Events...</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Almost the last part  -->
+      <div class="louis-vuitton-section">
+        <h2 class="louis-title">Upcycle Vault Services</h2>
+        <p class="louis-subtitle">
+            Upcycle Vault offers complementary wrapping on all orders, carefully packaged in the Maison's iconic boxes.
+        </p>
+        <div class="louis-services">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <img src="assets/Service Pages/Service_image1.jpg" alt="Service 1" class="service-image">
+            <h3>Product Development</h3>
+            <a href="Catagories/ProductDev/product.html" class="service-link">See how the products are made</a>
+          </div>
+          <!-- Service 2 -->
+          <div class="service-card">
+            <img src="assets/Service Pages/Service_image2.jpg" alt="Service 2" class="service-image">
+            <h3>Art of Gifting</h3>
+            <div class="service-links">
+              <a href="Catagories/woman/woman.html" class="service-link">Gifts for Women</a>
+              <a href="Catagories/Mens/men.html" class="service-link">Gifts for Men</a>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div class="service-card">
+            <img src="assets/Service Pages/Service_image3.jpg" alt="Service 3" class="service-image">
+            <h3>Future Collections</h3>
+            <a href="Catagories/Future/future.html" class="service-link">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer-section">
+        <h1 class="footer-title">Upcycle Vault</h1>
+      </footer>
+
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

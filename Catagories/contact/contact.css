@@ -1,0 +1,381 @@
+/* Font Faces */
+@font-face {
+  font-family: saveurSans;
+  src: url(ContactElement/Saveur_sans.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: jost;
+  src: url(ContactElement/Jost.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url(ContactElement/Jost_light.ttf);
+  font-display: swap;
+}
+
+/* Global Styles */
+body {
+  font-family: jost, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .card-btn {
+  text-decoration: underline;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid rgba(128, 128, 128, 0.7);
+  margin: 35px 0;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: black;
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.7s;
+  z-index: 1000;
+}
+
+.navbar:hover,
+.navbar.scrolled {
+  background: white;
+  color: black;
+  border-bottom: 1px solid lightgray;
+}
+
+/* Navbar List */
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar Links */
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 0 12px;
+  font-size: 0.8em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar:hover ul li a,
+.navbar.scrolled ul li a {
+  color: black;
+}
+
+.navbar .brand {
+  font-family: saveurSans;
+  font-size: 1.8em;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar:hover .brand,
+.navbar.scrolled .brand {
+  color: black;
+}
+
+.navbar i.fa-bars,
+.navbar i.fa-magnifying-glass {
+  color: white;
+  font-size: inherit;
+  transition: color 0.3s;
+}
+
+.navbar:hover i.fa-bars,
+.navbar:hover i.fa-magnifying-glass,
+.navbar.scrolled i.fa-bars,
+.navbar.scrolled i.fa-magnifying-glass {
+  color: black;
+}
+
+/* Mobile Navbar */
+.navbar ul.nav-hid {
+  display: none;
+}
+
+.navbar.active ul.nav-hid {
+  display: block;
+}
+
+
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 150px auto 50px; /* Increase top margin for spacing */
+  padding: 20px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: saveurSans, Arial, sans-serif;
+}
+
+.container p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  font-family: jost_light, Arial, sans-serif;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+  font-family: jost, Arial, sans-serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: jost, Arial, sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-family: saveurSans, Arial, sans-serif;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Popup */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  text-align: center;
+}
+
+.popup.show {
+  display: block; /* Show popup when 'show' class is added */
+}
+
+.popup p {
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.popup button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+.custom-footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #d0d0d0;
+  margin: 0 auto 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.footer-quote {
+  font-family: saveurSans, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ending-bar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 100px;
+}
+
+.ending-text {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/* Medium Devices - Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack menu items vertically */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .navbar ul li a {
+    font-size: 0.9em;
+    color: black; /* Ensure visibility on white background */
+  }
+
+  .navbar i.fa-bars {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar.active ul {
+    display: flex; /* Show dropdown menu when active */
+  }
+}
+
+/* Small Devices - Phones */
+@media (max-width: 480px) {
+  .navbar {
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .navbar ul {
+    top: 60px; /* Adjust position for smaller navbar */
+  }
+
+  .navbar .brand {
+    font-size: 1.4em;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em;
+  }
+}
+
+/* Extra Small Devices - Very Small Phones */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.7em;
+  }
+
+  .navbar .brand {
+    font-size: 1.2em;
+  }
+}

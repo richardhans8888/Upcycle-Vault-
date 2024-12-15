@@ -1,0 +1,381 @@
+@font-face {
+  font-family: saveurSans;
+  src: url(../ElementMen/saveurSans.ttf);
+}
+
+@font-face {
+  font-family: jost;
+  src: url(../ElementsMen/Jost.ttf);
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url(../ElementsMen/Jost_light.ttf);
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: white; 
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #e0e0e0; 
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  padding: 0 12px;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .brand {
+  font-family: saveurSans, serif;
+  font-size: 1.8em;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar i {
+  color: black;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar ul li a:hover,
+.navbar .brand:hover {
+  color: gray;
+}
+
+.navbar i:hover {
+  color: gray;
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: jost, sans-serif;
+  background-color: #f8f8f8; /* Light background for elegance */
+}
+
+/* Product Container */
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 50%; /* Set maximum width for the image container */
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-top: 1000px; /* Adjust this value to move the entire content down */
+  padding-top: 20px; /* Adds spacing inside the container, pushing content downward */
+}
+
+.product-title {
+  font-family: saveurSans, serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-material {
+  font-family: jost_light, sans-serif;
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.product-reference {
+  font-family: jost_light, sans-serif;
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-family: jost, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: block;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  font-family: jost, sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.boutique-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.contact-btn {
+  background-color: black;
+  color: white;
+}
+
+/* Other Products */
+body {
+  margin: 0;
+  font-family: jost, Arial, sans-serif; /* Default font */
+  background-color: #ffffff;
+  color: #333;
+}
+
+.product-section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: saveurSans, Arial, sans-serif; /* Using saveurSans for the title */
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible; /* Ensure content inside can move */
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 600px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-top: 50px !important;; /* Move the image down */
+}
+
+img {
+  margin-top: 150px;
+}
+
+.product-name {
+  font-family: jost, Arial, sans-serif; /* Using jost for product names */
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-family: jost_light, Arial, sans-serif; /* Using jost_light for product prices */
+  font-size: 20px;
+  color: #666;
+}
+
+/* Footer Section */
+.custom-footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto 20px auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.footer-quote {
+  font-family: saveurSans, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ending-bar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 100px;
+}
+
+.ending-text {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.product-item {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Make sure the text color inherits from the parent */
+  display: flex;
+  flex-direction: column; /* Keep the structure of the product item */
+  align-items: center;
+  text-align: center;
+}
+
+.product-item:hover {
+  transform: scale(1.05); /* Optional: Add hover effect */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}

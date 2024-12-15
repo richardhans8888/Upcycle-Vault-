@@ -1,0 +1,592 @@
+@font-face {
+  font-family: saveurSans;
+  src: url(ElementsMen/Saveur_sans.otf);
+}
+
+@font-face {
+  font-family: jost;
+  src: url(ElementsMen/Jost.ttf);
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url(ElementsMen/Jost_light.ttf);
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: white; 
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0; 
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+  }
+  
+  .navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    padding: 0 12px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .brand {
+    font-family: saveurSans, serif;
+    font-size: 1.8em;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .navbar i {
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .navbar ul li a:hover,
+  .navbar .brand:hover {
+    color: gray;
+  }
+  
+  .navbar i:hover {
+    color: gray;
+  }
+  
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+
+/* Men Section Styling */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 1000px; 
+  overflow: hidden;
+  margin-top: 150px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Back to Home Styling */
+.back-to-home {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  z-index: 100; 
+}
+
+.back-link {
+  font-family: saveurSans, serif;
+  font-size: 1.2rem; 
+  text-decoration: none; 
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff; 
+  padding: 10px 25px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.back-link:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000; 
+  border: 1px solid #000;
+}
+
+/* Catalog Section */
+.catalog {
+  margin: 50px auto;
+  max-width: 1850px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Catalog Grid Layout */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 2rem; /* Add some horizontal spacing */
+}
+
+/* Catalog Item */
+.catalog-item {
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Catalog Item Hover Effects */
+.catalog-item:hover {
+  transform: translateY(-10px); /* Lift the item up */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Catalog Image */
+.catalog-image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  transition: transform 0.3s ease-in-out; /* Image zoom effect */
+}
+
+/* Image Zoom on Hover */
+.catalog-item:hover .catalog-image {
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Catalog Title */
+.catalog-title {
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Title Hover Effect */
+.catalog-item:hover .catalog-title {
+  color: #333; /* Change title color on hover */
+}
+
+/* Catalog Price */
+.catalog-price {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Price Hover Effect */
+.catalog-item:hover .catalog-price {
+  color: #333; /* Change price color on hover */
+}
+
+
+/* Split Section Styling */
+.split-section {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+/* Left Image Section */
+.split-left {
+  flex: 1; /* Takes up half the screen */
+}
+
+.main-image {
+  width: 100%;
+  height: 100%; /* Fills the height of the container */
+  object-fit: cover; /* Ensures proper scaling without distortion */
+}
+
+/* Right Content Section */
+.split-right {
+  flex: 1;
+  padding: 50px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Text Content Styling */
+.text-content {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  position: relative; /* Makes the title adjustable within its container */
+  top: -10px; /* Adjust this value to move it up */
+  left: 0; /* Ensures alignment to the left */
+  margin: 0; /* Remove extra margin */
+  font-family: saveurSans, serif; /* LV font */
+  font-size: 3rem; /* Adjust font size */
+  font-weight: normal; /* Ensure it's not bold */
+  letter-spacing: 2px; /* Adds spacing between letters */
+  text-transform: uppercase; /* Makes text all uppercase */
+  margin-bottom: 10px;
+  color: #000; /* Black text */
+}
+
+
+.section-description {
+  font-family: jost_light, sans-serif; /* LV font for lighter weight */
+  font-size: 1.3rem; /* Adjust font size */
+  line-height: 1.6; /* Improves readability */
+  color: #333; /* Dark gray text */
+  margin-bottom: 30px; /* Adds space before the button */
+}
+
+.cta-button {
+  font-family: saveurSans, serif;
+  font-size: 1rem;
+  color: #000;
+  background: none;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between products */
+  width: 100%; /* Full width */
+  margin-top: 30px; /* Space between description and product grid */
+}
+
+.product-item {
+  text-align: center;
+}
+
+.product-image {
+  width: 100%; /* Make images responsive */
+  max-width: 400px; /* Change this value to resize images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 10px; /* Center the image and add bottom spacing */
+}
+
+
+.product-title {
+  font-family: jost_light, sans-serif;
+  font-size: 1.2rem; /* Adjust font size for product title */
+  color: #333;
+  margin-top: 5px;
+}
+
+.video-section {
+  display: flex;
+  justify-content: center; /* Centers the video horizontally */
+  align-items: center;
+  margin-top: 50px; /* Space above the video */
+  width: 100%;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 2100px; /* Matches the width of the picture above */
+  height: auto; /* Maintains the aspect ratio */
+  overflow: hidden;
+}
+
+.responsive-video {
+  width: 100%; /* Makes the video responsive */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the video fills the container proportionally */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.branding-section {
+  display: flex;
+  justify-content: center; /* Centers the text horizontally */
+  align-items: center; /* Centers the text vertically (if height is defined) */
+  height: 100px; /* Adjust height as needed */
+  background-color: #fff; /* White background */
+  margin-top: 50px; /* Optional: Add space above the section */
+}
+
+.branding-title {
+  font-family: saveurSans, serif; /* LV font */
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold; /* Makes the text bold */
+  text-transform: uppercase; /* Ensures all letters are uppercase */
+  letter-spacing: 2px; /* Adds space between letters */
+  color: #000; /* Black text */
+}
+
+/* Footer Section */
+.custom-footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto 20px auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.footer-quote {
+  font-family: saveurSans, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ending-bar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 100px;
+}
+
+.ending-text {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.catalog-link {
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Ensures text color matches the design */
+  display: block; /* Ensures the entire block is clickable */
+}
+
+.catalog-link img {
+  border: none; /* Removes any default border from images */
+  display: block; /* Ensures no gaps or underlines from inline elements */
+}
+
+.catalog-link:hover {
+  text-decoration: none; /* Ensures no underline on hover */
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Navbar Adjustments */
+  .navbar {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+  }
+
+  /* Slide Menu */
+  .slide-menu {
+    width: 70%; /* Reduce menu width on smaller screens */
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: 60vh; /* Reduce height for smaller screens */
+  }
+
+  /* Catalog Grid Adjustments */
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+    gap: 15px;
+  }
+
+  /* Product Grid Adjustments */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+  }
+
+  /* Split Section */
+  .split-section {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .split-right {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  /* Video Section */
+  .video-container {
+    max-width: 100%; /* Allow video to take full width */
+  }
+
+  /* Footer Adjustments */
+  .custom-footer {
+    padding: 15px 10px; /* Reduce padding */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Navbar Adjustments for Small Screens */
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.7em; /* Further reduce font size */
+  }
+
+  .navbar .brand {
+    font-size: 1.2em;
+  }
+
+  /* Slide Menu */
+  .slide-menu {
+    width: 100%; /* Full width for small screens */
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .hero-img {
+    object-fit: contain; /* Ensure proper scaling */
+  }
+
+  /* Catalog Grid Adjustments for Smaller Devices */
+  .catalog-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  /* Product Grid Adjustments for Small Screens */
+  .product-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  /* Split Section */
+  .split-right {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Adjust title size */
+  }
+
+  .section-description {
+    font-size: 1rem; /* Adjust description font size */
+  }
+
+  /* Footer Adjustments */
+  .custom-footer {
+    padding: 10px; /* Reduce padding further */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Navbar Adjustments for Very Small Screens */
+  .navbar ul li a {
+    font-size: 0.6em;
+  }
+
+  .navbar .brand {
+    font-size: 1em;
+  }
+
+  /* Hero Section Adjustments */
+  .hero-section {
+    height: auto;
+  }
+
+  .hero-img {
+    object-fit: contain;
+  }
+
+  /* Footer Adjustments for Smallest Devices */
+  .custom-footer {
+    font-size: 0.7rem; /* Smallest font size */
+  }
+
+  .ending-text {
+    font-size: 1.5rem;
+  }
+}

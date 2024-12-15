@@ -1,0 +1,698 @@
+@font-face {
+    font-family: saveurSans;
+    src: url(GoalsElement/Saveur_sans.otf);
+  }
+  
+  @font-face {
+    font-family: jost;
+    src: url(GoalsElement/Jost.ttf);
+  }
+  
+  @font-face {
+    font-family: jost_light;
+    src: url(GoalsElement/Jost_light.ttf);
+  }
+  
+  
+  
+  /* Navbar Styling */
+  .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 90px;
+      background: white; 
+      padding: 0 50px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #e0e0e0; 
+    }
+    
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar ul li {
+      list-style: none;
+    }
+    
+    .navbar ul li a {
+      font-family: 'Poppins', sans-serif;
+      color: black;
+      padding: 0 12px;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar .brand {
+      font-family: saveurSans, serif;
+      font-size: 1.8em;
+      color: black;
+      text-decoration: none;
+    }
+    
+    .navbar i {
+      color: black;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    
+    /* Hover Effects */
+    .navbar ul li a:hover,
+    .navbar .brand:hover {
+      color: gray;
+    }
+    
+    .navbar i:hover {
+      color: gray;
+    }
+
+/*  Goal */
+
+/* Goal Section Styling */
+.goal-section {
+    padding: 100px 20px 50px; /* Adjust padding to position below the navbar */
+    background-color: #fff;
+}
+
+.goal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center-aligns both title and paragraph */
+}
+
+.goal-title {
+    font-family: 'saveurSans', serif; /* Using the custom saveurSans font */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Adjust margin to move the title lower */
+    margin-top: 20px; /* Add margin-top to move the title down a bit */
+}
+
+.goal-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Thin gray line */
+    width: 50%; /* Line width as a percentage of the container */
+    margin: 0 auto 20px; /* Center the line and add space below */
+}
+
+.goal-description {
+    font-family: jost_light, sans-serif; /* Use Jost Light font for the paragraph */
+    font-size: 1.5rem; /* Change paragraph font size here */
+    line-height: 1.8; /* Adjust line spacing */
+    color: #333;
+    text-align: center; /* Center-aligns the paragraph text */
+}
+
+
+
+/* Quote Section */
+.quote-container {
+    text-align: center;
+    margin: 40px 20px; /* Adjust spacing */
+    padding: 20px;
+}
+
+.quote {
+    font-family: 'saveurSans', serif; /* Font for the quote */
+    font-size: 1.8rem; /* Adjust the quote font size */
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000; /* Black text color */
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-family: 'jost_light', sans-serif; /* Font for the author name */
+    font-size: 1rem; /* Adjust the author font size */
+    font-style: italic;
+    color: #555; /* Gray text for author */
+}
+
+/* Section Styling */
+/* Section Styling */
+.designers-section {
+    padding: 50px 20px;
+    text-align: left;
+    background-color: #fff;
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'saveurSans', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center; /* Center the title */
+}
+
+/* Grid Container */
+.designers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 5px; /* Minimal spacing between images */
+    justify-items: start; /* Align content left */
+}
+
+/* Designer Card */
+.designer-card {
+    width: 100%;
+    text-align: left;
+}
+
+/* Designer Image */
+.designer-image {
+    width: 100%;
+    height: 600px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images fit the box */
+}
+
+/* Designer Name */
+.designer-name {
+    font-family: 'jost', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Designer Description */
+.designer-description {
+    font-family: 'jost_light', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .designers-grid {
+        grid-template-columns: repeat(1, 1fr); /* One column on small screens */
+    }
+
+    .designer-image {
+        height: auto; /* Let images adjust height on smaller screens */
+    }
+}
+
+
+/* Goal Content Section */
+/* Goal Content Section */
+.goal-content-section {
+    padding: 60px 10%;
+    background-color: #f8f8f8;
+}
+
+/* Goal Title */
+.goal-title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.goal-title {
+    font-family: 'saveurSans', serif; /* Using the custom saveurSans font */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.goal-line {
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+/* Goal Content Container */
+.goal-content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Goal Text Container */
+.goal-text-container {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.goal-description {
+    font-family: 'jost', sans-serif; /* Using the custom jost font */
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Goal Image Container */
+.goal-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Section */
+.custom-footer {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-separator {
+    width: 90%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0 auto 20px auto;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: saveurSans, serif;
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+  .footer-quote {
+    font-family: saveurSans, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .ending-bar {
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 100px;
+  }
+  
+  .ending-text {
+    font-family: saveurSans, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+
+  /* Remove initial grey spill & add smooth transition */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9); /* Translucent */
+    color: white;
+    transition: left 0.5s ease, opacity 0.3s ease;
+    z-index: 1000;
+    opacity: 0; /* Make it invisible initially */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Consistent Font */
+  }
+  
+  /* Ensure smooth appearance */
+  .slide-menu.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  /* Slide Menu Links Consistency */
+  .slide-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+  
+  .slide-menu a:hover {
+    color: #f0a500;
+  }
+  
+  /* Close Arrow */
+  .close-arrow {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+
+
+
+
+
+
+
+
+
+/* Responsive Navbar */
+@media screen and (max-width: 320px) {
+  /* Navbar Adjustments for Very Small Screens */
+  .navbar ul li a {
+    font-size: 0.6em;
+  }
+
+  .navbar .brand {
+    font-size: 1em;
+  }
+
+  /* Hero Section Adjustments */
+  .hero-section {
+    height: auto;
+  }
+
+  .hero-img {
+    object-fit: contain;
+  }
+
+  /* Footer Adjustments for Smallest Devices */
+  .custom-footer {
+    font-size: 0.7rem; /* Smallest font size */
+  }
+
+  .ending-text {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Navbar Adjustments */
+  .navbar {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+  }
+
+  /* Slide Menu */
+  .slide-menu {
+    width: 70%; /* Reduce menu width on smaller screens */
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: 60vh; /* Reduce height for smaller screens */
+  }
+
+  /* Catalog Grid Adjustments */
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+    gap: 15px;
+  }
+
+  /* Product Grid Adjustments */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+  }
+
+  /* Split Section */
+  .split-section {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .split-right {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  /* Video Section */
+  .video-container {
+    max-width: 100%; /* Allow video to take full width */
+  }
+
+  /* Footer Adjustments */
+  .custom-footer {
+    padding: 15px 10px; /* Reduce padding */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Navbar Adjustments */
+  .navbar {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+  }
+
+  /* Slide Menu */
+  .slide-menu {
+    width: 70%; /* Reduce menu width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Navbar Adjustments for Small Screens */
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.7em; /* Further reduce font size */
+  }
+
+  .navbar .brand {
+    font-size: 1.2em;
+  }
+
+  /* Slide Menu */
+  .slide-menu {
+    width: 100%; /* Full width for small screens */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Navbar Adjustments for Very Small Screens */
+  .navbar ul li a {
+    font-size: 0.6em;
+  }
+
+  .navbar .brand {
+    font-size: 1em;
+  }
+}
+
+/* Goal Section Responsive */
+@media screen and (max-width: 992px) {
+  .goal-container {
+      padding: 0 30px;
+  }
+  .goal-title {
+      font-size: 2rem;
+  }
+  .goal-description {
+      font-size: 1.1rem;
+      line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .goal-container {
+      padding: 0 20px;
+  }
+  .goal-title {
+      font-size: 1.8rem;
+  }
+  .goal-description {
+      font-size: 1rem;
+      line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .goal-container {
+      padding: 0 10px;
+  }
+  .goal-title {
+      font-size: 1.5rem;
+  }
+  .goal-description {
+      font-size: 0.9rem;
+      line-height: 1.3;
+  }
+}
+
+/* Quote Section Responsive */
+@media screen and (max-width: 768px) {
+  .quote-container {
+      padding: 20px 10px;
+  }
+  .quote {
+      font-size: 1.5rem;
+      line-height: 1.4;
+  }
+  .quote-author {
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .quote {
+      font-size: 1.3rem;
+      line-height: 1.3;
+  }
+  .quote-author {
+      font-size: 0.8rem;
+  }
+}
+
+/* Designers Section Responsive */
+@media screen and (max-width: 992px) {
+  .designers-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .designers-grid {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+  .designer-card {
+      text-align: center;
+  }
+  .designer-image {
+      height: auto; /* Let images adjust height */
+  }
+  .designer-name {
+      font-size: 1.2rem;
+  }
+  .designer-description {
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .designer-name {
+      font-size: 1rem;
+  }
+  .designer-description {
+      font-size: 0.9rem;
+  }
+}
+
+/* Goal Content Section Responsive */
+@media screen and (max-width: 992px) {
+  .goal-content-container {
+      gap: 20px;
+  }
+  .goal-text-container {
+      text-align: center;
+      padding: 10px;
+  }
+  .goal-description {
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .goal-content-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  .goal-text-container,
+  .goal-image-container {
+      flex: unset;
+      width: 100%;
+  }
+  .goal-description {
+      font-size: 0.9rem;
+  }
+  .goal-title {
+      font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .goal-title {
+      font-size: 1.4rem;
+  }
+  .goal-description {
+      font-size: 0.85rem;
+  }
+  .goal-content-section {
+      padding: 15px 5%;
+  }
+}
+
+/* Footer Section Responsive */
+@media screen and (max-width: 992px) {
+  .custom-footer {
+      padding: 15px 0;
+  }
+  .footer-content {
+      font-size: 1rem;
+  }
+  .footer-quote {
+      font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-footer {
+      padding: 10px 0;
+  }
+  .footer-quote {
+      font-size: 1rem;
+  }
+  .ending-bar {
+      margin-top: 50px;
+  }
+  .ending-text {
+      font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-quote {
+      font-size: 0.9rem;
+  }
+  .ending-text {
+      font-size: 1.2rem;
+  }
+}

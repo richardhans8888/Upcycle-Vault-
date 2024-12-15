@@ -1,0 +1,403 @@
+@font-face {
+  font-family: saveurSans;
+  src: url(../../fonts/Saveur_sans.otf);
+}
+
+@font-face {
+  font-family: jost;
+  src: url(../../fonts/Jost.ttf);
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url(../../fonts/Jost_light.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.card-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+.card-link:hover .card-btn {
+  text-decoration: underline; 
+}
+
+
+.hr {
+  border: none;
+  border-top: 0.5px solid rgba(128, 128, 128, 0.421);
+  margin: 35px 0 35px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: black;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.7s;
+  z-index: 1000;
+}
+
+.navbar:hover,
+.navbar.scrolled {
+  background: white;
+  color: black;
+  border-bottom: 1px solid lightgray;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 0 12px;
+  font-size: 0.8em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar:hover ul li a,
+.navbar.scrolled ul li a {
+  color: black;
+}
+
+.navbar .brand {
+  font-family: saveurSans;
+  font-size: 1.8em;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar:hover .brand,
+.navbar.scrolled .brand {
+  color: black;
+}
+
+.navbar i.fa-bars,
+.navbar i.fa-magnifying-glass {
+  color: white;
+  font-size: inherit;
+  transition: color 0.3s;
+}
+
+.navbar:hover i.fa-bars,
+.navbar:hover i.fa-magnifying-glass,
+.navbar.scrolled i.fa-bars,
+.navbar.scrolled i.fa-magnifying-glass {
+  color: black;
+}
+  
+
+
+
+
+
+/* General Styles */
+body {
+  font-family: 'jost', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin: 60px auto 0;
+}
+
+.header-section h1 {
+  font-family: saveurSans, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.header-section p {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Image Section */
+.image-section {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+.image-caption {
+  font-family: jost_light, sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* Time line */
+
+.timeline-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.timeline-title {
+  font-family: saveurSans, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.timeline-description {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-image-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+.timeline-image {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.timeline-caption {
+  font-family: jost, sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+
+/* Timline */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Section Styles */
+.timeline-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.timeline-title {
+  font-family: saveurSans, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.timeline-description {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Image Section */
+.timeline-image-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1500px; /* Limit the width of the image container */
+}
+
+.timeline-image {
+  max-width: 100%; /* Ensure the image does not overflow */
+  height: auto; /* Maintain aspect ratio */
+  border: none;
+  margin-bottom: 10px;
+}
+
+.timeline-caption {
+  font-family: jost_light, sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .timeline-title {
+      font-size: 2rem;
+  }
+
+  .timeline-description {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-title {
+      font-size: 1.8rem;
+  }
+
+  .timeline-description {
+      font-size: 0.8rem;
+  }
+
+  .timeline-caption {
+      font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+/* Footer Section */
+.custom-footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto 20px auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.footer-quote {
+  font-family: saveurSans, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ending-bar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 100px;
+}
+
+.ending-text {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}

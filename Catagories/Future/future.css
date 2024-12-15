@@ -1,0 +1,413 @@
+@font-face {
+    font-family: saveurSans;
+    src: url(futureElements/Saveur_sans.otf);
+  }
+  
+  @font-face {
+    font-family: jost;
+    src: url(futureElements/Jost.ttf);
+  }
+  
+  @font-face {
+    font-family: jost_light;
+    src: url(futureElements/Jost_light.ttf);
+  }
+  
+  
+  
+  /* Navbar Styling */
+  .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 90px;
+      background: white; 
+      padding: 0 50px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #e0e0e0; 
+    }
+    
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar ul li {
+      list-style: none;
+    }
+    
+    .navbar ul li a {
+      font-family: 'Poppins', sans-serif;
+      color: black;
+      padding: 0 12px;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar .brand {
+      font-family: saveurSans, serif;
+      font-size: 1.8em;
+      color: black;
+      text-decoration: none;
+    }
+    
+    .navbar i {
+      color: black;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    
+    /* Hover Effects */
+    .navbar ul li a:hover,
+    .navbar .brand:hover {
+      color: gray;
+    }
+    
+    .navbar i:hover {
+      color: gray;
+    }
+    
+
+
+
+/* 1st  */
+/* Parent Container */
+.custom-image-section {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 1500px; /* Set your desired height */
+    overflow: hidden;
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove paddings */
+}
+
+/* Full-Width Image */
+.custom-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block; /* Remove any inline spacing */
+}
+
+/* Text Overlay */
+.custom-text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; /* Keep overlay aligned to the left */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for the overlay */
+    max-width: 40%; /* Restrict text width to 40% of the image width */
+}
+
+/* Title Styling */
+.custom-title {
+    font-family: 'saveurSans', serif; /* Font as specified */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Description Styling */
+.custom-description {
+    font-family: 'jost_light', sans-serif; /* Font as specified */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'jost', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Image Section */
+.image-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add spacing between images */
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 600px; /* Set max width for each image */
+    height: auto;
+    border: none; /* Remove card-like borders */
+}
+
+/* Text Section */
+.text-section {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align text vertically in the center */
+    text-align: center; /* Align text horizontally in the center */
+}
+
+.text-section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-family: 'jost_light', sans-serif; /* Light font for text */
+}
+
+
+/* Footer Section */
+.custom-footer {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-separator {
+    width: 90%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0 auto 20px auto;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: saveurSans, serif;
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+  .footer-quote {
+    font-family: saveurSans, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .ending-bar {
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 100px;
+  }
+  
+  .ending-text {
+    font-family: saveurSans, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+ /* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+} 
+  
+  
+
+
+/* Medium Devices - Tablets */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .brand {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbar ul li a {
+    font-size: 0.9em;
+  }
+
+  /* Custom Image Section */
+  .custom-image-section {
+    height: 1000px; /* Reduce height for tablets */
+  }
+  .custom-text-overlay {
+    font-size: 20px;
+    padding: 10px 15px;
+    max-width: 60%; /* Allow more space for text on tablets */
+  }
+  .custom-title {
+    font-size: 22px;
+  }
+  .custom-description {
+    font-size: 14px;
+  }
+
+  /* Image Section */
+  .image-container img {
+    max-width: 100%; /* Full width for images */
+  }
+
+  /* Text Section */
+  .text-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Footer */
+  .ending-text {
+    font-size: 1.8rem;
+  }
+  .footer-quote {
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Devices - Phones */
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    height: auto;
+    padding: 10px 15px;
+  }
+  .navbar .brand {
+    font-size: 1.2em;
+  }
+  .navbar ul {
+    gap: 8px;
+  }
+  .navbar ul li a {
+    font-size: 0.8em;
+  }
+
+  /* Custom Image Section */
+  .custom-image-section {
+    height: 800px; /* Further reduce height */
+  }
+  .custom-text-overlay {
+    font-size: 18px;
+    padding: 8px 10px;
+    max-width: 80%; /* Allow full width for text */
+  }
+  .custom-title {
+    font-size: 20px;
+  }
+  .custom-description {
+    font-size: 12px;
+  }
+
+  /* Image Section */
+  .image-container img {
+    max-width: 100%; /* Full width for images */
+  }
+
+  /* Text Section */
+  .text-section p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  .ending-text {
+    font-size: 1.6rem;
+  }
+  .footer-quote {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra Small Devices - Very Small Phones */
+@media (max-width: 320px) {
+  /* Navbar */
+  .navbar ul li a {
+    font-size: 0.7em;
+  }
+  .navbar .brand {
+    font-size: 1em;
+  }
+
+  /* Custom Image Section */
+  .custom-image-section {
+    height: 600px; /* Reduce height further */
+  }
+  .custom-text-overlay {
+    font-size: 16px;
+    padding: 5px 8px;
+    max-width: 100%; /* Use full width for text */
+  }
+  .custom-title {
+    font-size: 18px;
+  }
+  .custom-description {
+    font-size: 10px;
+  }
+
+  /* Footer */
+  .ending-text {
+    font-size: 1.4rem;
+  }
+  .footer-quote {
+    font-size: 1rem;
+  }
+}

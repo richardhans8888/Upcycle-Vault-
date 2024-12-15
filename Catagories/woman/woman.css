@@ -1,0 +1,587 @@
+@font-face {
+  font-family: saveurSans;
+  src: url(womanelements/Saveur_sans.otf);
+}
+
+@font-face {
+  font-family: jost;
+  src: url(womanelements/Jost.ttf);
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url(womanelements/Jost_light.ttf)
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: white;
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none; /* Ensures all bullet points are removed */
+}
+
+
+
+.navbar ul li {
+  list-style: none; /* Removes bullet points */
+  margin: 0 15px; /* Adds spacing between items */
+}
+
+
+.navbar ul li a {
+  font-family: jost, sans-serif;
+  color: black;
+  padding: 0 12px;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .brand {
+  font-family: saveurSans, serif;
+  font-size: 1.8em;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar i {
+  color: black;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar ul li a:hover,
+.navbar .brand:hover {
+  color: gray;
+}
+
+.navbar i:hover {
+  color: gray;
+}
+
+/* Fullscreen Video Section */
+.fullscreen-video {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+
+
+/* Catalog Section */
+.catalog {
+  margin: 50px auto;
+  max-width: 1850px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Catalog Grid Layout */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 2rem; /* Add some horizontal spacing */
+}
+
+/* Catalog Item */
+.catalog-item {
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Catalog Item Hover Effects */
+.catalog-item:hover {
+  transform: translateY(-10px); /* Lift the item up */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Catalog Image */
+.catalog-image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  transition: transform 0.3s ease-in-out; /* Image zoom effect */
+}
+
+/* Image Zoom on Hover */
+.catalog-item:hover .catalog-image {
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Catalog Title */
+.catalog-title {
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Title Hover Effect */
+.catalog-item:hover .catalog-title {
+  color: #333; /* Change title color on hover */
+}
+
+/* Catalog Price */
+.catalog-price {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Price Hover Effect */
+.catalog-item:hover .catalog-price {
+  color: #333; /* Change price color on hover */
+}
+
+
+/* Product Showcase Section */
+.product-showcase {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: saveurSans, serif;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 1.5px;
+  color: black;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 45%;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-title {
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.product-description {
+  font-family: jost_light, sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.shop-now {
+  font-family: jost, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.shop-now:hover {
+  color: gray;
+  border-color: gray;
+}
+
+/* Carousel Section */
+.carousel-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: saveurSans, serif;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: black;
+  text-decoration: underline;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  text-align: center;
+}
+
+.carousel-image {
+  width: 80%;
+  height: auto;
+  margin: 0 auto 15px;
+}
+
+.carousel-caption {
+  font-family: jost, sans-serif;
+  font-size: 1rem;
+  color: black;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Red Bag Section */
+.charming-bags-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.charming-bag-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.charming-bags-content {
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
+  padding: 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6); /* Add a grey translucent background */
+  border-radius: 15px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+}
+
+
+.charming-title {
+  font-family: saveurSans, serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.charming-description {
+  font-family: jost_light, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.charming-link {
+  font-family: jost, sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.charming-link:hover {
+  color: #ffcccc;
+}
+
+/* Footer Section */
+.custom-footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-separator {
+  width: 90%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto 20px auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: saveurSans, serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.footer-quote {
+  font-family: saveurSans, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ending-bar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 100px;
+}
+
+.ending-text {
+  font-family: saveurSans, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+a.catalog-link {
+  text-decoration: none; /* Removes underline from the links */
+}
+
+.catalog-link img {
+  display: block; /* Ensures images inside links are treated as block-level elements */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em;
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+  }
+
+  /* Catalog grid adjustments */
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr); /* Reduce columns for smaller screens */
+    gap: 15px;
+  }
+
+  /* Product container adjustments */
+  .product-container {
+    flex-direction: column; /* Stack products vertically */
+    gap: 20px;
+  }
+
+  .product {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Navbar adjustments for smaller devices */
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.7em;
+  }
+
+  .navbar .brand {
+    font-size: 1.2em;
+  }
+
+  /* Fullscreen video adjustments */
+  .fullscreen-video {
+    height: auto; /* Allow content to define height */
+  }
+
+  /* Charming bags section */
+  .charming-bags-content {
+    max-width: 80%; /* Reduce content width */
+    padding: 30px;
+  }
+
+  .charming-title {
+    font-size: 2rem; /* Scale down title */
+  }
+
+  .charming-description {
+    font-size: 1rem;
+  }
+
+  /* Catalog grid for smallest devices */
+  .catalog-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  /* Carousel section adjustments */
+  .carousel-slide {
+    min-width: 100%; /* Ensure slides are full width */
+  }
+
+  .carousel-image {
+    width: 90%; /* Adjust image size */
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Further scaling down for very small devices */
+  .navbar ul li a {
+    font-size: 0.6em;
+  }
+
+  .charming-bags-content {
+    padding: 20px;
+  }
+
+  .charming-title {
+    font-size: 1.5rem;
+  }
+
+  .charming-description {
+    font-size: 0.9rem;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+}

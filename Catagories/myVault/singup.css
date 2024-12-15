@@ -1,0 +1,517 @@
+@font-face {
+    font-family: saveurSans;
+    src: url(myVaultElements/Saveur_sans.otf);
+  }
+  
+  @font-face {
+    font-family: jost;
+    src: url(myVaultElements/Jost.ttf);
+  }
+  
+  @font-face {
+    font-family: jost_light;
+    src: url(myVaultElements/Jost_light.ttf);
+  }
+  
+  
+  /* Navbar Styling */
+  .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 90px;
+      background: white; 
+      padding: 0 50px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #e0e0e0; 
+    }
+    
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar ul li {
+      list-style: none;
+    }
+    
+    .navbar ul li a {
+      font-family: 'Poppins', sans-serif;
+      color: black;
+      padding: 0 12px;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar .brand {
+      font-family: saveurSans, serif;
+      font-size: 1.8em;
+      color: black;
+      text-decoration: none;
+    }
+    
+    .navbar i {
+      color: black;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    
+    /* Hover Effects */
+    .navbar ul li a:hover,
+    .navbar .brand:hover {
+      color: gray;
+    }
+    
+    .navbar i:hover {
+      color: gray;
+    }
+
+/* Hover Effects */
+.navbar ul li a:hover,
+.navbar .brand:hover {
+  color: gray;
+}
+
+.navbar i:hover {
+  color: gray;
+}
+
+/*  Singup page */
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('your-background-image.jpg'); /* Replace with your own image */
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 20px;
+}
+
+.signup-form {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    color: #333;
+}
+
+/* Header Style */
+.signup-form h1 {
+    font-family: 'SaveurSans', sans-serif; /* Custom luxury font */
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signup-form p {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.existing-account {
+    color: #b09f77; 
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.existing-account a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Form Field Styles */
+.signup-form label {
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.signup-form input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.signup-form input:focus {
+    border-color: #b28d62; /* Elegant gold color */
+    outline: none;
+}
+
+/* Password Info */
+.signup-form .password-info {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Submit Button */
+.signup-form button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    background-color: black; /* Elegant gold color */
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: black; /* Slightly darker gold for hover effect */
+}
+
+/* Footer / Subscription */
+.signup-form .subscribe {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-form .subscribe a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .signup-form {
+        max-width: 90%;
+        padding: 30px 20px;
+    }
+
+    .signup-form h1 {
+        font-size: 2em;
+    }
+
+    .signup-form p {
+        font-size: 1em;
+    }
+
+    .signup-form input, .signup-form button {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'jost', sans-serif; /* Use Jost as the primary font */
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('your-background-image.jpg'); /* Replace with your background */
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 20px;
+}
+
+.signup-form {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    font-family: 'saveurSans', sans-serif; /* Louis Vuitton-inspired font for text */
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'saveurSans', sans-serif;
+}
+
+.signup-form p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.existing-account a {
+    color: #b09f77; /* Louis Vuitton-inspired gold color */
+    text-decoration: none;
+    font-family: 'jost_light', sans-serif;
+}
+
+.existing-account a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'jost', sans-serif;
+}
+
+button.submit-btn {
+    background-color: #b09f77; /* Gold color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'jost', sans-serif;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.submit-btn:hover {
+    background-color: #8c7a50; /* Darker gold on hover */
+}
+
+button.submit-btn:active {
+    background-color: #6f5c3e;
+}
+
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9); /* Translucent */
+    color: white;
+    transition: left 0.5s ease, opacity 0.3s ease;
+    z-index: 1000;
+    opacity: 0; /* Make it invisible initially */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Consistent Font */
+  }
+  
+  /* Ensure smooth appearance */
+  .slide-menu.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  /* Slide Menu Links Consistency */
+  .slide-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+  
+  .slide-menu a:hover {
+    color: #f0a500;
+  }
+  
+  /* Close Arrow */
+  .close-arrow {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+
+
+  /* Remove initial grey spill & add smooth transition */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9); /* Translucent */
+    color: white;
+    transition: left 0.5s ease, opacity 0.3s ease;
+    z-index: 1000;
+    opacity: 0; /* Make it invisible initially */
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Consistent Font */
+  }
+  
+  /* Ensure smooth appearance */
+  .slide-menu.active {
+    left: 0;
+    opacity: 1;
+  }
+  
+  /* Slide Menu Links Consistency */
+  .slide-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+  
+  .slide-menu a:hover {
+    color: #f0a500;
+  }
+  
+  /* Close Arrow */
+  .close-arrow {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Match site font */
+  }
+
+
+
+
+
+
+  /* Medium Devices - Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Keep the brand aligned to the top-left */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: flex-start; /* Align menu items to the left */
+    width: 100%;
+    background: white; /* Match the navbar background */
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar ul li {
+    text-align: left;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 0.9em;
+    color: black; /* Match the dropdown text color */
+  }
+
+  .navbar i.fa-bars {
+    display: block; /* Show the menu toggle icon */
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto; /* Align to the right */
+  }
+
+  .navbar.active ul {
+    display: flex; /* Show the dropdown menu when active */
+  }
+}
+
+/* Small Devices - Phones */
+@media (max-width: 480px) {
+  .navbar {
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .navbar .brand {
+    font-size: 1.4em;
+  }
+
+  .navbar ul {
+    top: 60px; /* Adjust dropdown position for smaller navbar */
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em;
+  }
+}
+
+/* Extra Small Devices - Very Small Phones */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .navbar .brand {
+    font-size: 1.2em;
+  }
+
+  .navbar ul li a {
+    font-size: 0.7em;
+  }
+}

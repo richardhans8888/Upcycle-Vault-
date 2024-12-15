@@ -1,0 +1,658 @@
+@font-face {
+  font-family: saveurSans;
+  src: url(ArticleElements/Saveur_sans.otf)
+}
+
+@font-face {
+  font-family: jost;
+  src: url(ArticleElements/Jost.ttf);
+}
+
+@font-face {
+  font-family: jost_light;
+  src: url(ArticleElements/Jost_light.ttf);
+}
+  
+  
+  
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: white; 
+  padding: 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #e0e0e0; 
+  font-family: saveurSans, serif; /* Consistent font */
+  transition: all 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add spacing between menu items */
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-family: jost, sans-serif; /* Consistent font for links */
+  color: black;
+  padding: 0 12px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .brand {
+  font-family: saveurSans, serif;
+  font-size: 1.8em;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar i {
+  color: black;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.navbar ul li a:hover,
+.navbar .brand:hover {
+  color: gray;
+}
+
+.navbar i:hover {
+  color: gray;
+}
+
+
+
+/* Remove initial grey spill & add smooth transition */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 300px;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9); /* Translucent */
+  color: white;
+  transition: left 0.5s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0; /* Make it invisible initially */
+  padding: 20px;
+  font-family: saveurSans, serif; /* Consistent Font */
+}
+
+/* Ensure smooth appearance */
+.slide-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+.slide-menu ul{
+  margin-left: 20px;
+}
+
+/* Slide Menu Links Consistency */
+.slide-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+.slide-menu a:hover {
+  color: #f0a500;
+}
+
+/* Close Arrow */
+.close-arrow {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Match site font */
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container setup */
+body {
+  font-family: jost, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-family: saveurSans, sans-serif;
+  font-size: 3rem;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+/* Main content section */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content img {
+  width: 300%; 
+  max-width: 1500px; 
+  height: auto; 
+}
+
+.main-image {
+  width: 80%;
+  max-width: 800px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.text-content {
+  font-family: jost_light, sans-serif;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: jost, sans-serif;
+  font-size: 2.5rem;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+}
+
+.event-name {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+/*  */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Container styles */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Headline and subtitle */
+.headline {
+  font-family: saveurSans, sans-serif;
+  font-size: 36px; 
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.subtitle {
+  font-family: jost_light, sans-serif;
+  font-size: 18px; 
+  margin: 20px 0;
+}
+
+/* Shows container */
+.shows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Show sections */
+.show {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Women and Men's specific styles */
+.women img, .men img {
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
+  margin-bottom: 20px;
+}
+
+/* Divider between the two shows */
+.divider {
+  width: 2px;
+  background-color: black;
+  height: 100%;
+  margin: 0 30px;
+}
+
+/* Title and date styles */
+.show h2 {
+  font-family: saveurSans, sans-serif;
+  font-size: 24px; 
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-family: jost_light, sans-serif;
+  font-size: 16px; 
+  color: gray;
+}
+
+/* Image  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Image Section */
+.image-section {
+  position: relative;
+  width: 100%;
+  height: 1000px; 
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Overlay */
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-family: saveurSans, sans-serif;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Image Section */
+.image-section {
+  position: relative;
+  width: 100%;
+  height: auto; 
+  text-align: center;
+}
+
+.image {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  object-fit: contain;
+}
+
+
+/* Text Overlay */
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-family: saveurSans, sans-serif;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+
+
+
+/* Down */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jost, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Header section */
+.header-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.header-title {
+  font-family: saveurSans, sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header-description {
+  font-family: jost_light, sans-serif;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Container for the content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* Content layout */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Individual show section */
+.show {
+  flex: 1;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-family: saveurSans, sans-serif;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.category {
+  font-family: jost_light, sans-serif;
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-family: jost, sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+/*  Last section */
+
+.custom-image-section {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+}
+
+.custom-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  max-width: 40%;
+}
+
+.custom-title {
+  font-family: 'saveurSans', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.custom-description {
+  font-family: 'jost_light', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------ */
+
+/* Unique CSS for the Second Section */
+.custom-image-section-bottom {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+}
+
+.custom-image-bottom {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-text-overlay-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  max-width: 40%;
+}
+
+.custom-title-bottom {
+  font-family: 'saveurSans', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.custom-description-bottom {
+  font-family: 'jost_light', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+
+/* Medium Devices - Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the top-left */
+  }
+
+  .navbar .brand {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Align brand to the top-left */
+  }
+
+  .navbar ul {
+    width: 100%; /* Make ul take full width */
+    display: flex;
+    justify-content: space-between; /* Separate "Menu" and "Contact Us/My Vault" */
+    align-items: flex-start; /* Align content to the top */
+    gap: 10px;
+  }
+
+  .navbar ul:first-child {
+    flex: 1; /* Push "Menu" section to the left */
+  }
+
+  .navbar ul:last-child {
+    flex: 1; /* Push "Contact Us" and "My VAULT" to the right */
+    justify-content: flex-end;
+  }
+
+  .navbar ul li {
+    display: inline-block; /* Ensure items don’t break into multiple lines */
+  }
+
+  .navbar ul li a {
+    font-size: 0.9em;
+    white-space: nowrap; /* Prevent wrapping of text */
+  }
+
+  #menu_icon {
+    font-size: 1.2em;
+  }
+}
+
+/* Small Devices - Phones */
+@media (max-width: 480px) {
+  .navbar {
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .navbar .brand {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 8px; /* Add spacing between items */
+  }
+
+  .navbar ul:first-child {
+    margin-bottom: 10px; /* Add space below "Menu" section */
+  }
+
+  .navbar ul li a {
+    font-size: 0.8em;
+    white-space: nowrap; /* Prevent wrapping of text */
+  }
+}
+
+/* Extra Small Devices - Very Small Phones */
+@media (max-width: 320px) {
+  .navbar ul li a {
+    font-size: 0.7em;
+    white-space: nowrap;
+  }
+
+  .navbar .brand {
+    font-size: 1em;
+  }
+}
